@@ -1,9 +1,16 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from "react";
+import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
+import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
   logo: (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 318 55" width="138.763636364" height="24">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 318 55"
+      width="138.763636364"
+      height="24"
+    >
       <g transform="matrix(1,0,0,1,-80.8,-79)">
         <path
           d="M167.222 90.404H173.147L184.327 114.944L195.507 90.404H201.431V123.907H195.698V102.147L185.76 123.907H182.893L172.956 102.147V123.907H167.222V90.404Z"
@@ -29,7 +36,10 @@ const config: DocsThemeConfig = {
           d="M329.978 124.626C327.302 124.626 324.945 124.147 322.906 123.188C320.9 122.198 319.339 120.792 318.224 118.971C317.109 117.117 316.552 114.928 316.552 112.404C316.552 109.944 317.093 107.803 318.176 105.981C319.291 104.128 320.868 102.706 322.906 101.716C324.945 100.693 327.302 100.182 329.978 100.182C332.653 100.182 334.994 100.693 337.001 101.716C339.039 102.706 340.616 104.128 341.731 105.981C342.846 107.803 343.403 109.944 343.403 112.404C343.403 114.928 342.846 117.117 341.731 118.971C340.616 120.792 339.039 122.198 337.001 123.188C334.994 124.147 332.653 124.626 329.978 124.626ZM329.978 119.881C332.175 119.881 333.927 119.194 335.233 117.82C336.539 116.414 337.192 114.609 337.192 112.404C337.192 110.071 336.539 108.25 335.233 106.94C333.959 105.598 332.207 104.927 329.978 104.927C327.748 104.927 325.98 105.598 324.674 106.94C323.4 108.25 322.763 110.071 322.763 112.404C322.763 114.609 323.416 116.414 324.722 117.82C326.028 119.194 327.78 119.881 329.978 119.881Z"
           fill="url(#textGrad)"
         />
-        <g fill="#ffffff" transform="matrix(0.25232294032,0,0,0.25232294032,-18.5,-5.725)">
+        <g
+          fill="#ffffff"
+          transform="matrix(0.25232294032,0,0,0.25232294032,-18.5,-5.725)"
+        >
           <path d="M1478.3 515.9 c-13.6 -2.6 -23 -12.1 -26.3 -26.1 -0.5 -2.4 -1 -19 -1 -37 l0 -32.8 12.4 0 12.5 0 0.3 32.3 c0.3 32 0.3 32.2 2.7 36.4 3.7 6.4 9 8.7 18.9 8.1 6.4 -0.4 8.9 -1.1 14.1 -3.8 3.5 -1.9 7.8 -5.2 9.7 -7.5 l3.4 -4.2 0 -30.7 0 -30.6 12.5 0 12.5 0 0 48 0 48 -12 0 -12 0 0 -7.1 0 -7 -4.7 3.9 c-2.7 2.2 -6.7 4.9 -9 6.1 -9 4.5 -23.2 6.2 -34 4z" />
           <path d="M1596.6 516 c-8.3 -1.3 -16.8 -3.6 -21.3 -5.7 l-3.8 -1.8 -0.5 -10.6 -0.5 -10.6 6 2.7 c10.7 4.9 18.8 6.4 33 6.5 15.5 0 18.5 -1.1 18.5 -6.9 0 -4.9 -4.2 -8 -14.8 -11.1 -29.4 -8.6 -35.8 -11.7 -40 -19.4 -3.3 -5.7 -4 -14.3 -1.8 -20.9 4.4 -13.1 21.8 -20.2 46.1 -18.9 11.7 0.7 21 2.5 26.9 5.3 l3.6 1.8 0 10.2 0 10.3 -5.7 -2.6 c-7.9 -3.5 -17.2 -5.3 -27.3 -5.3 -13.9 0 -19 2.3 -19 8.4 0 5.6 2.6 7.1 22.3 12.5 23.9 6.6 32.2 12.2 34.7 23.4 3.3 14.3 -4.1 25.8 -19.8 30.8 -7.7 2.4 -26.9 3.4 -36.6 1.9z" />
         </g>
@@ -78,9 +88,21 @@ const config: DocsThemeConfig = {
           <feOffset dx="1" dy="2" />
           <feGaussianBlur stdDeviation="3" />
           <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.22 0" />
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2551_6105" />
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2551_6105" result="shape" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.22 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_2551_6105"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_2551_6105"
+            result="shape"
+          />
         </filter>
         <filter
           id="filter1_d_2551_6105"
@@ -101,9 +123,21 @@ const config: DocsThemeConfig = {
           <feOffset dy="4" />
           <feGaussianBlur stdDeviation="5" />
           <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2551_6105" />
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2551_6105" result="shape" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_2551_6105"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_2551_6105"
+            result="shape"
+          />
         </filter>
         <filter
           id="filter2_d_2551_6105"
@@ -124,9 +158,21 @@ const config: DocsThemeConfig = {
           <feOffset dx="1" dy="2" />
           <feGaussianBlur stdDeviation="3" />
           <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.22 0" />
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2551_6105" />
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2551_6105" result="shape" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.22 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_2551_6105"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_2551_6105"
+            result="shape"
+          />
         </filter>
         <filter
           id="filter3_d_2551_6105"
@@ -147,9 +193,21 @@ const config: DocsThemeConfig = {
           <feOffset dy="4" />
           <feGaussianBlur stdDeviation="5" />
           <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2551_6105" />
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2551_6105" result="shape" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_2551_6105"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_2551_6105"
+            result="shape"
+          />
         </filter>
         <linearGradient
           id="paint0_linear_2551_6105"
@@ -183,15 +241,60 @@ const config: DocsThemeConfig = {
   primaryHue: 151,
   darkMode: false,
   nextThemes: {
-    forcedTheme: 'dark'
+    forcedTheme: "dark",
   },
   project: {
-    link: 'https://github.com/Morphous-xyz'
+    link: "https://github.com/Morphous-xyz",
   },
-  docsRepositoryBase: 'https://github.com/Morphous-xyz/trinity/tree/master/docs',
+  docsRepositoryBase:
+    "https://github.com/Morphous-xyz/trinity/tree/master/docs",
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Language" content="en" />
+      <link rel="shortcut icon" href="/favicon.ico" />
+    </>
+  ),
   footer: {
-    component: null
-  }
-}
+    component: null,
+  },
+  useNextSeoProps() {
+    const { route } = useRouter();
+    const { frontMatter } = useConfig();
 
-export default config
+    const defaultSeoProps = {
+      description:
+        "Morphous is a router for DSProxy users built on top of Morpho Protocol, to add additional features like leverage, strategies — all in one-click.",
+      openGraph: {
+        description:
+          "Morphous is a router for DSProxy users built on top of Morpho Protocol, to add additional features like leverage, strategies — all in one-click.",
+        title: "Morphous Documentation",
+        images: [{ url: "https://www.morphous.xyz/assets/hero.png" }],
+      },
+      themeColor: "#ffffff",
+      twitter: {
+        cardType: "summary_large_image",
+        handle: "@Mutative_",
+        site: "docs.morphous.xyz",
+      },
+    } as const;
+
+    if (!/^\/index/.test(route))
+      return {
+        ...defaultSeoProps,
+        description: frontMatter.description,
+        openGraph: {
+          ...defaultSeoProps.openGraph,
+          description: frontMatter.description,
+          images: frontMatter.image
+            ? [{ url: frontMatter.image }]
+            : defaultSeoProps.openGraph.images,
+          title: frontMatter.title,
+        },
+        titleTemplate: `%s – Morphous Documentation`,
+      };
+    return { ...defaultSeoProps, title: "Morphous Documentation" };
+  },
+};
+
+export default config;
